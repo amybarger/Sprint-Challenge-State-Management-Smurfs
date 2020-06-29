@@ -29,6 +29,9 @@ const useStyles = makeStyles({
   });  
 
 const Smurf = props => {
+
+    const classes = useStyles();
+    
     useEffect(() => {
         props.fetchSmurf();
     }, [])
