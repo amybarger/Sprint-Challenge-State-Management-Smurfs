@@ -10,13 +10,13 @@ export const fetchSmurf = () => {
             .get('http://localhost:3333/smurfs')
             .then(res => {
                 dispatch({ type: 'FETCH_SMURF_SUCCESS',
-                payload: res.map(smurfData => )},
+                payload: res},
                 console.log("Smurf data retrieved"))
             })
             .catch(err => {
                 dispatch({
                     type: 'FETCH_SMURF_FAILURE',
-                    payload: `Error ${err.response.status} : ${err.response}`
+                    payload: `Error ${err.response} : ${err.response}`
                 })
             })
     }

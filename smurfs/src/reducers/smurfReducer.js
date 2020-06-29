@@ -1,8 +1,5 @@
 const initialState = {
-    name: '',
-    age: '',
-    height: '',
-    id: '',
+    smurf: '',
     isFetching: false,
     error: ''
 };
@@ -18,7 +15,7 @@ export const smurfReducer = (state = initialState, action) => {
         return {
             ...state,
             isFetching: false,
-            name: action.payload,
+            smurf: action.payload,
             error: ''
         }
         case 'FETCH_SMURF_FAILURE' : 
