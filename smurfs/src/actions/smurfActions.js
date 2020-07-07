@@ -21,3 +21,20 @@ export const fetchSmurf = () => {
             })
     }
 }
+
+export const smurfPost = (newSmurf) => {
+    return dispatch => {
+        axios
+        .post("http://localhost:3333/smurfs", {
+            name: newSmurf.name,
+            age: newSmurf.age,
+            height: newSmurf.height,
+            id: Date.now()
+        }
+            )
+        .then(response => {console.log("Response received for POST axios", response)
+        dispatch({ type: 'POSTING_SMURF', payload: response.data})
+        ;})
+        .catch(err => console.log("POST axios error",err));
+    };
+}
