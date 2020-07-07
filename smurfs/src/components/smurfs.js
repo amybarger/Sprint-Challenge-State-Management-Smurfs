@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 const Smurf = props => {
 
     const classes = useStyles();
-    
+
     useEffect(() => {
         props.fetchSmurf();
     }, [])
@@ -51,14 +51,8 @@ const Smurf = props => {
                         <Typography className={classes.pos} color="textSecondary">
                         {char.height}
                         </Typography>
-                        <Typography variant="body2" component="p">
-                        well meaning and kindly.
-                        <br />
-                        {'"a benevolent smile"'}
-                        </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Learn More</Button>
                     </CardActions>
                     </Card>
                 );
